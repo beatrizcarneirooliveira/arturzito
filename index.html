@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Controle de Ponto Rosa</title>
+<link rel="icon" href="/imagens/logo-ponto.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<div class="container">
+<header>
+  <div class="brand">
+    <div class="logo">P</div>
+    <div>
+      <h1>Controle de Ponto</h1>
+      <p class="lead">Registre facilmente sua entrada e saída</p>
+    </div>
+  </div>
+
+  <div class="clock-card">
+    <div class="clock" id="clock">00:00:00</div>
+  </div>
+</header>
+
+<main>
+  <div>
+    <div class="punch-panel">
+      <div class="time-now">Hora atual:</div>
+      <div class="big-time" id="bigTime">00:00:00</div>
+
+      <div class="buttons">
+        <button class="btn-entry" onclick="registrar('Entrada')">Registrar Entrada</button>
+        <button class="btn-exit" onclick="registrar('Saída')">Registrar Saída</button>
+      </div>
+    </div>
+
+    <h3>Registros:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaRegistros"></tbody>
+    </table>
+  </div>
+
+  <aside class="side">
+    <div class="summary">
+      <h3>Resumo do Dia</h3>
+      <p>Total de registros: <span id="totalRegistros">0</span></p>
+    </div>
+
+    <div class="controls">
+      <button class="btn-small" onclick="limparRegistros()">Limpar Registros</button>
+    </div>
+  </aside>
+</main>
+
+<footer>Feito com 💖</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
